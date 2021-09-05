@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  border-size: border-box;
+}
+
+html, body {
+  height: 100vh;
+  background: #666666;
+  font-family: 'Balsamiq Sans', sans-serif;
+}
+textarea {
+  width: 300px;
+  height: 150px;
+   transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out; outline: 0; box-shadow: none; border: none; border: 1px solid #ced4da; border-radius: 0; box-sizing: content-box; background-color: transparent; overflow-y: hidden; padding: 1.5rem 0; resize: none; 
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 70%;
+  padding: 30px 90px 90px 90px;
+  border: 6px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 20px 20px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 50px;
+  position: relative;
+}
+
+
+}
+</style>
+<head>
+	<title>Spam Filter</title>
+</head>
+<form action="{{ url_for('main') }}" method="POST">
+<div class="card">
+    <div class="col">
+    	Email
+      <div class="form-group">
+        <textarea name="TextBox">{{ email }}</textarea>
+      </div>
+    </div>
+
+ <div class="col">
+      <div class="form-group">
+        <label>Result:</label>
+        {{ result }}
+      </div>
+    </div>
+
+    <div class="col">
+      <input type="submit" value="Submit",action>
+    </div>
+  </div>
+</form>
+</html>
